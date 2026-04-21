@@ -19,6 +19,35 @@ A modern, web-based Academic Evaluation and Feedback System built with PHP and M
 - **Styling Framework**: Bootstrap 5
 - **Icons**: FontAwesome 6
 
+  ⚙️ Installation & Setup
+
+1. **Clone the Project**:
+   ```bash
+   git clone https://github.com/prakash200514/FB--Student.git
+   ```
+
+2. **Move to Web Directory**:
+   Copy the project folder to `C:\xampp\htdocs\` (XAMPP users).
+
+3. **Database Setup**:
+   - Open **phpMyAdmin** (`http://localhost/phpmyadmin`).
+   - Create a new database named `student_feedback_db`.
+   - Import the `database.sql` file provided in the repository.
+
+4. **Configuration**:
+   - Open `config.php`.
+   - Update the database credentials to match your local setup:
+     ```php
+     define('DB_SERVER', 'localhost');
+     define('DB_USERNAME', 'root');
+     define('DB_PASSWORD', 'your_password'); // Standard is empty in XAMPP
+     define('DB_NAME', 'student_feedback_db');
+     ```
+
+5. **Run the Application**:
+   - Start Apache and MySQL in your local server control panel.
+   - Navigate to `http://localhost/student-feedback` in your browser.
+
 📋 Prerequisites
 
 - **Web Server**: XAMPP / WAMP / MAMP or any PHP-enabled server.
