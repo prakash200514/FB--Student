@@ -53,3 +53,17 @@ A modern, web-based Academic Evaluation and Feedback System built with PHP and M
 - **Web Server**: XAMPP / WAMP / MAMP or any PHP-enabled server.
 - **PHP Version**: 7.4 or higher.
 - **Database**: MySQL/MariaDB.
+
+📂 Project Structure
+
+```text
+├── admin/               # Administrative controls
+├── assets/              # UI assets (CSS, Images)
+├── config.php           # Database connection configuration
+├── dashboard.php        # Main navigation hub for students
+├── index.php            # Welcome & Login page
+├── course_feedback.php   # Course evaluation module
+├── teacher_feedback.php  # Faculty evaluation module
+├── pta_feedback.php      # PTA review module
+├── statistics.php       # Feedback analytics dashboard
+└── database.sql         # SQL schema for the system
