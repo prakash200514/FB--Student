@@ -10,3 +10,11 @@ A modern, web-based Academic Evaluation and Feedback System built with PHP and M
 - **PTA Feedback**: Specialized review section for Parent-Teacher Association activities and parent involvement.
 - **Real-time Analytics**: Built-in statistics dashboard to view feedback trends (Integrated for Admin/Staff).
 - **Responsive UI**: Premium glassmorphic design built with Bootstrap 5 and smooth CSS transitions.
+
+🛠️ Tech Stack
+
+- **Backend**: PHP 7.4+
+- **Database**: MySQL
+- **Frontend**: HTML5, CSS3, JavaScript
+- **Styling Framework**: Bootstrap 5
+- **Icons**: FontAwesome 6
