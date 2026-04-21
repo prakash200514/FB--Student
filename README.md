@@ -67,3 +67,8 @@ A modern, web-based Academic Evaluation and Feedback System built with PHP and M
 ├── pta_feedback.php      # PTA review module
 ├── statistics.php       # Feedback analytics dashboard
 └── database.sql         # SQL schema for the system
+
+🔐 Default Admin Credentials
+
+- **Username**: admin
+- **Password**: admin123
