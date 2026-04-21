@@ -72,3 +72,7 @@ A modern, web-based Academic Evaluation and Feedback System built with PHP and M
 
 - **Username**: admin
 - **Password**: admin123
+
+📝 License
+
+This project is open-source. Feel free to contribute and improve!
