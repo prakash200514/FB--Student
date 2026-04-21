@@ -18,3 +18,9 @@ A modern, web-based Academic Evaluation and Feedback System built with PHP and M
 - **Frontend**: HTML5, CSS3, JavaScript
 - **Styling Framework**: Bootstrap 5
 - **Icons**: FontAwesome 6
+
+📋 Prerequisites
+
+- **Web Server**: XAMPP / WAMP / MAMP or any PHP-enabled server.
+- **PHP Version**: 7.4 or higher.
+- **Database**: MySQL/MariaDB.
