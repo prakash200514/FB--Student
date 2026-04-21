@@ -1,0 +1,746 @@
+/* =====================================================
+   ACADEMIC PORTAL - Global Styles
+   Theme: Dark Navy Header + Cream Background
+   ===================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Lato:wght@300;400;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* ---- CSS Variables ---- */
+:root {
+    --navy:       #0d1f3c;
+    --navy-light: #1a2e50;
+    --cream:      #f5f0e8;
+    --cream-dark: #ede8dd;
+    --gold:       #c9a84c;
+    --gold-light: #e8c96a;
+    --white:      #ffffff;
+    --text-dark:  #1a1a2e;
+    --text-mid:   #111111;
+    --text-light: #222222;
+    --card-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    --card-hover:  0 8px 32px rgba(0,0,0,0.14);
+    --accent:     #c9a84c;
+}
+
+/* ---- Base ---- */
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+    background-color: var(--cream);
+    font-family: 'Lato', 'Poppins', sans-serif;
+    color: var(--text-dark);
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+/* =====================================================
+   TOP NAVIGATION BAR
+   ===================================================== */
+.ap-navbar {
+    background-color: var(--navy);
+    padding: 0 2rem;
+    height: 58px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.3);
+}
+
+.ap-navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--white);
+    text-decoration: none;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 1.0rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.ap-navbar-brand .brand-icon {
+    font-size: 1.3rem;
+    color: var(--gold);
+}
+
+.ap-navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.ap-navbar .btn-nav {
+    background: transparent;
+    border: 1.5px solid rgba(255,255,255,0.35);
+    color: var(--white);
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    padding: 5px 16px;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.ap-navbar .btn-nav:hover {
+    background: rgba(255,255,255,0.12);
+    border-color: rgba(255,255,255,0.6);
+    color: var(--white);
+}
+
+.ap-navbar .btn-nav-gold {
+    background: var(--gold);
+    border-color: var(--gold);
+    color: var(--navy);
+    font-weight: 700;
+}
+
+.ap-navbar .btn-nav-gold:hover {
+    background: var(--gold-light);
+    border-color: var(--gold-light);
+    color: var(--navy);
+}
+
+/* =====================================================
+   PAGE HERO SECTION  (centered title area)
+   ===================================================== */
+.ap-hero {
+    text-align: center;
+    padding: 3.5rem 1rem 2.5rem;
+}
+
+.ap-hero-badge {
+    display: inline-block;
+    background: var(--navy);
+    color: var(--white);
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    padding: 6px 20px;
+    border-radius: 4px;
+    margin-bottom: 1.2rem;
+}
+
+.ap-hero-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-weight: 900;
+    font-size: clamp(3rem, 8vw, 5rem);
+    color: var(--navy);
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    margin: 0 0 0.5rem;
+    line-height: 1;
+}
+
+.ap-hero-divider {
+    width: 60px;
+    height: 3px;
+    background: var(--gold);
+    margin: 0.8rem auto 1rem;
+    border: none;
+}
+
+.ap-hero-subtitle {
+    color: var(--text-light);
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
+    margin: 0;
+}
+
+/* =====================================================
+   FEEDBACK CARDS  (dashboard grid)
+   ===================================================== */
+.ap-cards-row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 24px;
+    padding: 1.5rem 2rem 4rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.ap-card {
+    background: var(--white);
+    border-radius: 12px;
+    box-shadow: var(--card-shadow);
+    padding: 2.2rem 2rem;
+    text-align: center;
+    width: 210px;
+    min-width: 180px;
+    flex: 0 0 auto;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    border: 1.5px solid rgba(0,0,0,0.04);
+    cursor: pointer;
+}
+
+.ap-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--card-hover);
+    color: inherit;
+    text-decoration: none;
+}
+
+.ap-card-emoji {
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+    display: block;
+    line-height: 1.2;
+}
+
+.ap-card-title {
+    font-family: 'Lato', 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 1.15rem;
+    color: var(--navy);
+    margin: 0 0 0.4rem;
+}
+
+.ap-card-subtitle {
+    font-size: 0.95rem;
+    color: var(--text-light);
+    margin: 0;
+    line-height: 1.4;
+}
+
+/* =====================================================
+   SEMESTER SELECTOR  (dashboard)
+   ===================================================== */
+.ap-semester-bar {
+    background: var(--white);
+    border-bottom: 1px solid var(--cream-dark);
+    padding: 0.8rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    font-size: 1.05rem;
+    color: var(--text-mid);
+}
+
+.ap-semester-bar .student-info {
+    color: var(--text-light);
+    font-size: 0.95rem;
+    margin-left: 1rem;
+    padding-left: 1rem;
+    border-left: 1px solid #ddd;
+}
+
+.ap-semester-bar select {
+    border: 1.5px solid #ddd;
+    border-radius: 5px;
+    padding: 4px 12px;
+    font-size: 1.0rem;
+    font-family: 'Lato', sans-serif;
+    background-color: var(--white);
+    cursor: pointer;
+}
+
+.ap-semester-bar select:focus {
+    border-color: var(--navy);
+    outline: none;
+}
+
+/* =====================================================
+   FORM PAGE LAYOUT
+   ===================================================== */
+.ap-page-wrap {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem 4rem;
+}
+
+.ap-page-header {
+    margin-bottom: 1.5rem;
+}
+
+.ap-page-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-weight: 700;
+    font-size: 1.8rem;
+    color: var(--navy);
+    letter-spacing: 1px;
+    margin: 0 0 0.2rem;
+}
+
+.ap-page-meta {
+    font-size: 1.0rem;
+    color: var(--text-light);
+    letter-spacing: 0.3px;
+}
+
+/* =====================================================
+   CONTENT CARDS  (form sections)
+   ===================================================== */
+.ap-section-card {
+    background: var(--white);
+    border-radius: 10px;
+    box-shadow: var(--card-shadow);
+    padding: 1.8rem 2rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid rgba(0,0,0,0.04);
+}
+
+.ap-section-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-weight: 700;
+    font-size: 1rem;
+    color: var(--navy);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin: 0 0 1rem;
+    padding-bottom: 0.6rem;
+    border-bottom: 2px solid var(--cream-dark);
+}
+
+/* =====================================================
+   TABLES
+   ===================================================== */
+.ap-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 1.05rem;
+}
+
+.ap-table thead th {
+    background-color: var(--navy);
+    color: var(--white);
+    padding: 12px 16px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+    text-align: center;
+    border: none;
+}
+
+.ap-table thead th:first-child {
+    text-align: left;
+    border-radius: 0;
+}
+
+.ap-table tbody tr {
+    border-bottom: 1px solid #f0ede6;
+    transition: background 0.15s;
+}
+
+.ap-table tbody tr:last-child {
+    border-bottom: none;
+}
+
+.ap-table tbody tr:hover {
+    background-color: #faf8f4;
+}
+
+.ap-table tbody td {
+    padding: 11px 16px;
+    vertical-align: middle;
+    color: var(--text-dark);
+}
+
+.ap-table tbody td:first-child {
+    text-align: left;
+    color: var(--text-mid);
+    font-size: 1.0rem;
+}
+
+/* =====================================================
+   EXACT IMAGE GRADING SCALE
+   ===================================================== */
+.ap-exact-scale {
+    width: 100%;
+    max-width: 850px;
+    margin: 1.5rem auto 2.5rem;
+    font-family: 'Times New Roman', Times, serif; 
+}
+
+/* Numbers Container */
+.ap-exact-nums {
+    position: relative;
+    height: 25px;
+    margin-bottom: 5px;
+    font-weight: 700;
+    font-size: 1.15rem;
+    color: #000;
+}
+
+.ap-num {
+    position: absolute;
+    bottom: 0;
+}
+
+/* The Bar Container */
+.ap-exact-bar {
+    display: flex;
+    width: 100%;
+    border: 1px solid #000;
+    background-color: #a0a4a8; /* matching the image gray */
+    height: 38px;
+}
+
+.ap-exact-bar-segment {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.15rem;
+    color: #000;
+    border-right: 1px solid #000;
+}
+
+.ap-exact-bar-segment:last-child {
+    border-right: none;
+}
+
+/* Descriptions Container */
+.ap-exact-descs {
+    display: flex;
+    width: 100%;
+    margin-top: 6px;
+    font-weight: 700;
+    font-size: 1.05rem;
+    color: #000;
+    text-align: center;
+}
+
+.ap-desc-segment {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 0 5px;
+}
+
+/* =====================================================
+   SCORE INPUTS
+   ===================================================== */
+.score-input {
+    width: 68px;
+    text-align: center;
+    border: 1.5px solid #d8d0c0;
+    border-radius: 6px;
+    padding: 5px 6px;
+    font-weight: 700;
+    font-size: 1.05rem;
+    color: var(--navy);
+    background: #faf8f4;
+    display: block;
+    margin: 0 auto;
+    transition: all 0.2s;
+}
+
+.score-input:focus {
+    border-color: var(--navy);
+    box-shadow: 0 0 0 3px rgba(13,31,60,0.1);
+    background: var(--white);
+    outline: none;
+}
+
+/* Remove spin arrows */
+.score-input::-webkit-outer-spin-button,
+.score-input::-webkit-inner-spin-button { -webkit-appearance: none; appearance: none; margin: 0; }
+.score-input[type=number] { -moz-appearance: textfield; appearance: textfield; }
+
+/* =====================================================
+   FORM INPUTS  (general)
+   ===================================================== */
+.form-control, .form-select {
+    border: 1.5px solid #d8d0c0;
+    border-radius: 6px;
+    padding: 9px 13px;
+    font-size: 1.05rem;
+    font-family: 'Lato', sans-serif;
+    background-color: var(--white);
+    color: var(--text-dark);
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: var(--navy);
+    box-shadow: 0 0 0 3px rgba(13,31,60,0.1);
+    outline: none;
+}
+
+/* =====================================================
+   BUTTONS
+   ===================================================== */
+.btn-primary-custom {
+    background: var(--navy);
+    border: 2px solid var(--navy);
+    color: var(--white);
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 1.0rem;
+    letter-spacing: 1px;
+    padding: 10px 30px;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.btn-primary-custom:hover {
+    background: var(--navy-light);
+    border-color: var(--navy-light);
+    color: var(--white);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(13,31,60,0.25);
+}
+
+.btn-secondary-custom {
+    background: transparent;
+    border: 1.5px solid #c0bab0;
+    color: var(--text-mid);
+    font-family: 'Lato', sans-serif;
+    font-weight: 600;
+    font-size: 1.0rem;
+    padding: 10px 28px;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    display: inline-block;
+}
+
+.btn-secondary-custom:hover {
+    background: var(--cream-dark);
+    border-color: #aaa;
+    color: var(--text-dark);
+}
+
+/* =====================================================
+   LOGIN PAGE
+   ===================================================== */
+.ap-login-wrap {
+    min-height: calc(100vh - 58px);
+    background: var(--cream);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.ap-login-card {
+    background: var(--white);
+    border-radius: 14px;
+    box-shadow: 0 8px 40px rgba(13,31,60,0.14);
+    padding: 2.8rem 2.5rem;
+    width: 100%;
+    max-width: 430px;
+}
+
+.ap-login-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: var(--navy);
+    text-align: center;
+    margin-bottom: 0.3rem;
+}
+
+.ap-login-subtitle {
+    text-align: center;
+    color: var(--text-light);
+    font-size: 1.0rem;
+    margin-bottom: 1.8rem;
+}
+
+/* =====================================================
+   STUDENT INFO PANEL  (breadcrumb bar on forms)
+   ===================================================== */
+.ap-info-bar {
+    background: var(--white);
+    border: 1px solid var(--cream-dark);
+    border-left: 4px solid var(--navy);
+    border-radius: 8px;
+    padding: 0.9rem 1.3rem;
+    margin-bottom: 1.2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    align-items: center;
+    font-size: 1.0rem;
+    color: var(--text-mid);
+}
+
+.ap-info-bar strong {
+    color: var(--navy);
+    font-weight: 700;
+}
+
+/* =====================================================
+   SECTION SEPARATOR IN FORMS
+   ===================================================== */
+.ap-section-sep {
+    background: var(--navy);
+    color: var(--white);
+    font-family: 'Lato', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 6px 16px;
+    border-radius: 4px;
+    display: inline-block;
+    margin: 1.5rem 0 1rem;
+}
+
+/* =====================================================
+   LEGEND / SCALE BOX
+   ===================================================== */
+.ap-legend-box {
+    background: #faf8f4;
+    border: 1px solid var(--cream-dark);
+    border-radius: 8px;
+    padding: 0.9rem 1.2rem;
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+    color: var(--text-mid);
+}
+
+.ap-legend-box .legend-item {
+    display: inline-block;
+    margin: 3px 10px 3px 0;
+}
+
+.ap-legend-box .legend-num {
+    background: var(--navy);
+    color: var(--white);
+    font-weight: 700;
+    font-size: 0.9rem;
+    padding: 1px 7px;
+    border-radius: 10px;
+    margin-right: 4px;
+}
+
+/* =====================================================
+   ALERTS
+   ===================================================== */
+.ap-alert-danger {
+    background: #fff0f0;
+    border: 1px solid #ffc9c9;
+    border-left: 4px solid #e53e3e;
+    color: #c53030;
+    border-radius: 7px;
+    padding: 0.75rem 1rem;
+    margin-bottom: 1rem;
+    font-size: 1.0rem;
+}
+
+.ap-alert-info {
+    background: #f0f4ff;
+    border: 1px solid #c3d0f7;
+    border-left: 4px solid var(--navy);
+    color: var(--navy);
+    border-radius: 7px;
+    padding: 0.75rem 1rem;
+    margin-bottom: 1rem;
+    font-size: 1.0rem;
+}
+
+/* =====================================================
+   ADMIN SIDEBAR  
+   ===================================================== */
+.ap-sidebar {
+    height: 100vh;
+    background: var(--navy);
+    color: var(--white);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 240px;
+    padding: 0;
+    box-shadow: 3px 0 15px rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+    z-index: 100;
+}
+
+.ap-sidebar-brand {
+    background: rgba(0,0,0,0.25);
+    padding: 1.2rem 1.5rem;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 0.95rem;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--white);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.ap-sidebar-brand span {
+    color: var(--gold);
+}
+
+.ap-sidebar-nav {
+    padding: 1rem 0;
+    flex: 1;
+}
+
+.ap-sidebar-nav a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: rgba(255,255,255,0.9);
+    text-decoration: none;
+    padding: 10px 1.5rem;
+    font-size: 1.0rem;
+    font-family: 'Lato', sans-serif;
+    font-weight: 600;
+    transition: all 0.2s;
+    border-left: 3px solid transparent;
+}
+
+.ap-sidebar-nav a:hover,
+.ap-sidebar-nav a.active {
+    color: var(--white);
+    background: rgba(255,255,255,0.07);
+    border-left-color: var(--gold);
+}
+
+.ap-sidebar-nav a.danger {
+    color: #fc8181;
+}
+
+.ap-sidebar-nav a.danger:hover {
+    color: #fff;
+    background: rgba(229,62,62,0.15);
+    border-left-color: #e53e3e;
+}
+
+.ap-admin-content {
+    margin-left: 240px;
+    padding: 2rem;
+    min-height: 100vh;
+    background: var(--cream);
+}
+
+.ap-admin-header {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--cream-dark);
+}
+
+/* =====================================================
+   RESPONSIVENESS
+   ===================================================== */
+@media (max-width: 768px) {
+    .ap-cards-row { gap: 16px; padding: 1rem 1rem 3rem; }
+    .ap-card { width: 46%; }
+    .ap-hero-title { font-size: 2.5rem; letter-spacing: 3px; }
+    .ap-sidebar { width: 200px; }
+    .ap-admin-content { margin-left: 200px; }
+}
+
+@media (max-width: 576px) {
+    .ap-card { width: 100%; max-width: 280px; }
+    .ap-sidebar { display: none; }
+    .ap-admin-content { margin-left: 0; }
+}
